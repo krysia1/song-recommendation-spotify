@@ -1,4 +1,6 @@
 env/
 .env
 .DS_Store
+.cache
 .cache-user-library-read
+.cache-user-read-currently-playing
