@@ -1,10 +1,7 @@
 import os
 import pandas as pd
-from datetime import datetime
 import webbrowser
 import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-from spotipy.oauth2 import SpotifyOAuth
 import spotipy.util as util
 
 from dotenv import load_dotenv
