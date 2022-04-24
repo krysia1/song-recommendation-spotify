@@ -12,13 +12,10 @@ load_dotenv()
 CLIENT_ID = os.environ.get("CLIENT_ID")
 CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
 
-playlist_dic = {}
-
 spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
 client_secret=CLIENT_SECRET,
 redirect_uri='http://localhost:8080/callback',
 scope='user-read-currently-playing'))
-
 
 current_track = spotify.current_user_playing_track()
 

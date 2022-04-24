@@ -28,7 +28,6 @@ for i in spotify.current_user_playlists()['items']:
 
 print("PLAYLISTS: ", playlist_dic)
 
-
 def generate_playlist_df(playlist_name, playlist_dic):
     
     playlist = pd.DataFrame()
