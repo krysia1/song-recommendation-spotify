@@ -5,7 +5,7 @@ WIP...
 
 ## Usage
 
-`python3 -m venv env` - to create virtual environment for the project
+`python3 -m venv env` - to create virtual environment
 
 `source env/bin/activate` - to run virtual environment
 
@@ -16,6 +16,8 @@ WIP...
 `python3 spotifyNow.py` - to get the name, artist and album of currently playing song
 
 `python3 recommend.py` - to get 10 recommendations based on a playlist (for now this playlist is hardcoded)
+
+`python3 detect.py` - to start Spotify voice controll (only hardcoded commands available)
 
 `deactivate` - to deactivate virtual environment
 

@@ -97,7 +97,7 @@ def generate_playlist_vector(spotify_features, playlist_df, weight_factor):
     spotify_features_playlist = spotify_features[spotify_features['track_id'].isin(playlist_df['track_id'].values)]
     spotify_features_playlist = spotify_features_playlist.merge(playlist_df[['track_id','date_added']], on = 'track_id', how = 'inner')
     
-    spotify_features_playlist.drop_duplicates('track_id', inplace=True)
+    #spotify_features_playlist.drop_duplicates('track_id', inplace=True)
 
     spotify_features_nonplaylist = spotify_features[~spotify_features['track_id'].isin(playlist_df['track_id'].values)]
 
@@ -120,7 +120,7 @@ def generate_playlist_vector(spotify_features, playlist_df, weight_factor):
 #    print("playlist_feature_set_weighted_final:", playlist_feature_set_weighted_final)
 #    playlist_feature_set_weighted_final = playlist_feature_set_weighted_final.drop('artist_name', axis = 1)
 #    playlist_feature_set_weighted_final = playlist_feature_set_weighted_final.drop('track_name', axis = 1)
-    
+
 #    print(playlist_feature_set_weighted_final.sum(axis = 0))
 
     return playlist_feature_set_weighted_final.sum(axis = 0), spotify_features_nonplaylist
@@ -148,6 +148,6 @@ def generate_recommendation(spotify_data, playlist_vector, nonplaylist_df):
     
 
 top10 = generate_recommendation(spotify_data, playlist_vector, nonplaylist_df)
-print(top10)
+# print(top10)
 
 webbrowser.open(top10.iloc[0]['uri'])
